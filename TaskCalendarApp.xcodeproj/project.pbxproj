@@ -12,6 +12,8 @@
 		3DA45F0723BA0E5B00F9B36E /* CalendarDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DA45F0523BA0E5B00F9B36E /* CalendarDayCell.xib */; };
 		3DA45F0A23BA12E200F9B36E /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA45F0923BA12E200F9B36E /* UICollectionView+Extensions.swift */; };
 		3DA45F0C23BA132600F9B36E /* NSObject+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA45F0B23BA132600F9B36E /* NSObject+extension.swift */; };
+		3DA45F0F23BA14B800F9B36E /* DayTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA45F0E23BA14B800F9B36E /* DayTask.swift */; };
+		3DA45F1123BA156100F9B36E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA45F1023BA156100F9B36E /* Task.swift */; };
 		3DFA0AC123BA0A1F0012BF4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA0AC023BA0A1F0012BF4F /* AppDelegate.swift */; };
 		3DFA0AC323BA0A1F0012BF4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA0AC223BA0A1F0012BF4F /* SceneDelegate.swift */; };
 		3DFA0AC523BA0A1F0012BF4F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA0AC423BA0A1F0012BF4F /* CalendarViewController.swift */; };
@@ -48,6 +50,8 @@
 		3DA45F0523BA0E5B00F9B36E /* CalendarDayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarDayCell.xib; sourceTree = "<group>"; };
 		3DA45F0923BA12E200F9B36E /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		3DA45F0B23BA132600F9B36E /* NSObject+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+extension.swift"; sourceTree = "<group>"; };
+		3DA45F0E23BA14B800F9B36E /* DayTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTask.swift; sourceTree = "<group>"; };
+		3DA45F1023BA156100F9B36E /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		3DFA0ABD23BA0A1F0012BF4F /* TaskCalendarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskCalendarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFA0AC023BA0A1F0012BF4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DFA0AC223BA0A1F0012BF4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +144,15 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		3DA45F0D23BA14A100F9B36E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				3DA45F0E23BA14B800F9B36E /* DayTask.swift */,
+				3DA45F1023BA156100F9B36E /* Task.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		3DFA0AB423BA0A1F0012BF4F = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +184,7 @@
 				3DA45F0123BA0C4D00F9B36E /* View */,
 				3DA45F0223BA0C5800F9B36E /* ViewModel */,
 				3DA45F0323BA0C6700F9B36E /* UseCase */,
+				3DA45F0D23BA14A100F9B36E /* Entity */,
 				3DA45F0823BA12C600F9B36E /* Utility */,
 				3DFA0AC923BA0A200012BF4F /* Assets.xcassets */,
 				3DFA0ACB23BA0A200012BF4F /* LaunchScreen.storyboard */,
@@ -460,11 +474,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA45F1123BA156100F9B36E /* Task.swift in Sources */,
 				3DA45F0623BA0E5B00F9B36E /* CalendarDayCell.swift in Sources */,
 				3DA45F0C23BA132600F9B36E /* NSObject+extension.swift in Sources */,
 				3DFA0AC523BA0A1F0012BF4F /* CalendarViewController.swift in Sources */,
 				3DA45F0A23BA12E200F9B36E /* UICollectionView+Extensions.swift in Sources */,
 				3DFA0AC123BA0A1F0012BF4F /* AppDelegate.swift in Sources */,
+				3DA45F0F23BA14B800F9B36E /* DayTask.swift in Sources */,
 				3DFA0AC323BA0A1F0012BF4F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
