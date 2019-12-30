@@ -20,5 +20,8 @@ class CalendarViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-}
 
+    private func initSubviews() {
+        calendarView.registerClass(cellType: CalendarDayCell.self)
+    }
+}
