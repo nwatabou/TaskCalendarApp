@@ -3,14 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		18F949E9C84C427CC1939122 /* Pods_TaskCalendarApp_TaskCalendarAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045FC533FB361DD4B94B2B3D /* Pods_TaskCalendarApp_TaskCalendarAppUITests.framework */; };
 		3DFA0AC123BA0A1F0012BF4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA0AC023BA0A1F0012BF4F /* AppDelegate.swift */; };
 		3DFA0AC323BA0A1F0012BF4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA0AC223BA0A1F0012BF4F /* SceneDelegate.swift */; };
-		3DFA0AC523BA0A1F0012BF4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA0AC423BA0A1F0012BF4F /* ViewController.swift */; };
+		3DFA0AC523BA0A1F0012BF4F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA0AC423BA0A1F0012BF4F /* CalendarViewController.swift */; };
 		3DFA0AC823BA0A1F0012BF4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFA0AC623BA0A1F0012BF4F /* Main.storyboard */; };
 		3DFA0ACA23BA0A200012BF4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DFA0AC923BA0A200012BF4F /* Assets.xcassets */; };
 		3DFA0ACD23BA0A200012BF4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFA0ACB23BA0A200012BF4F /* LaunchScreen.storyboard */; };
@@ -43,7 +43,7 @@
 		3DFA0ABD23BA0A1F0012BF4F /* TaskCalendarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskCalendarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFA0AC023BA0A1F0012BF4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DFA0AC223BA0A1F0012BF4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3DFA0AC423BA0A1F0012BF4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3DFA0AC423BA0A1F0012BF4F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		3DFA0AC723BA0A1F0012BF4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DFA0AC923BA0A200012BF4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DFA0ACC23BA0A200012BF4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -91,6 +91,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DA45F0023BA0C3F00F9B36E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3DFA0AC423BA0A1F0012BF4F /* CalendarViewController.swift */,
+				3DFA0AC623BA0A1F0012BF4F /* Main.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3DA45F0123BA0C4D00F9B36E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DA45F0223BA0C5800F9B36E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3DA45F0323BA0C6700F9B36E /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		3DFA0AB423BA0A1F0012BF4F = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +148,10 @@
 			children = (
 				3DFA0AC023BA0A1F0012BF4F /* AppDelegate.swift */,
 				3DFA0AC223BA0A1F0012BF4F /* SceneDelegate.swift */,
-				3DFA0AC423BA0A1F0012BF4F /* ViewController.swift */,
-				3DFA0AC623BA0A1F0012BF4F /* Main.storyboard */,
+				3DA45F0023BA0C3F00F9B36E /* ViewController */,
+				3DA45F0123BA0C4D00F9B36E /* View */,
+				3DA45F0223BA0C5800F9B36E /* ViewModel */,
+				3DA45F0323BA0C6700F9B36E /* UseCase */,
 				3DFA0AC923BA0A200012BF4F /* Assets.xcassets */,
 				3DFA0ACB23BA0A200012BF4F /* LaunchScreen.storyboard */,
 				3DFA0ACE23BA0A200012BF4F /* Info.plist */,
@@ -165,7 +197,6 @@
 				5766C02754FAB7D14F4BE17B /* Pods-TaskCalendarAppTests.debug.xcconfig */,
 				803125153E8743E79AFBC9AC /* Pods-TaskCalendarAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -408,7 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DFA0AC523BA0A1F0012BF4F /* ViewController.swift in Sources */,
+				3DFA0AC523BA0A1F0012BF4F /* CalendarViewController.swift in Sources */,
 				3DFA0AC123BA0A1F0012BF4F /* AppDelegate.swift in Sources */,
 				3DFA0AC323BA0A1F0012BF4F /* SceneDelegate.swift in Sources */,
 			);
