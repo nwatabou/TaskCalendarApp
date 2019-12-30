@@ -16,12 +16,15 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var calendarView: UICollectionView!
 
+    private let viewModel = CalendarViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        initSubviews()
     }
 
     private func initSubviews() {
         calendarView.registerClass(cellType: CalendarDayCell.self)
+        viewModel.requestCalendarAccessIfNeeded()
     }
 }

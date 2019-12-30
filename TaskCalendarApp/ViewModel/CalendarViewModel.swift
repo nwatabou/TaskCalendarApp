@@ -11,4 +11,8 @@ import RxSwift
 final class CalendarViewModel {
 
     private let useCase = CalendarUseCase()
+
+    func requestCalendarAccessIfNeeded() {
+        useCase.requestCalendarAccessIfNeeded()
+    }
 }
