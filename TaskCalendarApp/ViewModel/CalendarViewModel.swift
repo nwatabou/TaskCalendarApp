@@ -10,9 +10,13 @@ import RxSwift
 
 final class CalendarViewModel {
 
-    private let useCase = CalendarUseCase()
+    private let eventUseCase = EventUseCase()
 
     func requestCalendarAccessIfNeeded() {
-        useCase.requestCalendarAccessIfNeeded()
+        eventUseCase.requestCalendarAccessIfNeeded()
+    }
+
+    func fetchEvents() -> Single<[DayTask]> {
+        return eventUseCase.fetchEventsInOneYear()
     }
 }

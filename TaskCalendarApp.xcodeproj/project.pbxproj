@@ -16,6 +16,7 @@
 		3DA45F1123BA156100F9B36E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA45F1023BA156100F9B36E /* Task.swift */; };
 		3DA45F1723BA166600F9B36E /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA45F1623BA166600F9B36E /* CalendarViewModel.swift */; };
 		3DA45F1923BA168B00F9B36E /* CalendarUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA45F1823BA168B00F9B36E /* CalendarUseCase.swift */; };
+		3DA45F1B23BA288200F9B36E /* EventUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA45F1A23BA288200F9B36E /* EventUseCase.swift */; };
 		3DFA0AC123BA0A1F0012BF4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA0AC023BA0A1F0012BF4F /* AppDelegate.swift */; };
 		3DFA0AC323BA0A1F0012BF4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA0AC223BA0A1F0012BF4F /* SceneDelegate.swift */; };
 		3DFA0AC523BA0A1F0012BF4F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA0AC423BA0A1F0012BF4F /* CalendarViewController.swift */; };
@@ -56,6 +57,7 @@
 		3DA45F1023BA156100F9B36E /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		3DA45F1623BA166600F9B36E /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		3DA45F1823BA168B00F9B36E /* CalendarUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarUseCase.swift; sourceTree = "<group>"; };
+		3DA45F1A23BA288200F9B36E /* EventUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventUseCase.swift; sourceTree = "<group>"; };
 		3DFA0ABD23BA0A1F0012BF4F /* TaskCalendarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskCalendarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFA0AC023BA0A1F0012BF4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DFA0AC223BA0A1F0012BF4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				3DA45F1823BA168B00F9B36E /* CalendarUseCase.swift */,
+				3DA45F1A23BA288200F9B36E /* EventUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				3DA45F0623BA0E5B00F9B36E /* CalendarDayCell.swift in Sources */,
 				3DA45F0C23BA132600F9B36E /* NSObject+extension.swift in Sources */,
 				3DFA0AC523BA0A1F0012BF4F /* CalendarViewController.swift in Sources */,
+				3DA45F1B23BA288200F9B36E /* EventUseCase.swift in Sources */,
 				3DA45F0A23BA12E200F9B36E /* UICollectionView+Extensions.swift in Sources */,
 				3DFA0AC123BA0A1F0012BF4F /* AppDelegate.swift in Sources */,
 				3DA45F1923BA168B00F9B36E /* CalendarUseCase.swift in Sources */,

@@ -8,6 +8,9 @@
 
 import UIKit
 
+import RxSwift
+import RxCocoa
+
 class CalendarViewController: UIViewController {
 
     @IBOutlet weak var controllView: UIView!
@@ -17,6 +20,8 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var calendarView: UICollectionView!
 
     private let viewModel = CalendarViewModel()
+    private let disposeBag = DisposeBag()
+    private var dayTasks = [DayTask]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

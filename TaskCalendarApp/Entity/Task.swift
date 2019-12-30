@@ -9,9 +9,9 @@
 import Foundation
 
 struct Task {
-    let title: String
-    let stardDate: Date
-    let endDate: Date
+    let title: String?
+    let stardDate: Date?
+    let endDate: Date?
     let isAllDayTask: Bool
-    let notes: String
+    let notes: String?
 }
