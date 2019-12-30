@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		18F949E9C84C427CC1939122 /* Pods_TaskCalendarApp_TaskCalendarAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045FC533FB361DD4B94B2B3D /* Pods_TaskCalendarApp_TaskCalendarAppUITests.framework */; };
+		3DA45F0623BA0E5B00F9B36E /* CalendarDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA45F0423BA0E5B00F9B36E /* CalendarDayCell.swift */; };
+		3DA45F0723BA0E5B00F9B36E /* CalendarDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DA45F0523BA0E5B00F9B36E /* CalendarDayCell.xib */; };
 		3DFA0AC123BA0A1F0012BF4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA0AC023BA0A1F0012BF4F /* AppDelegate.swift */; };
 		3DFA0AC323BA0A1F0012BF4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA0AC223BA0A1F0012BF4F /* SceneDelegate.swift */; };
 		3DFA0AC523BA0A1F0012BF4F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA0AC423BA0A1F0012BF4F /* CalendarViewController.swift */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		045FC533FB361DD4B94B2B3D /* Pods_TaskCalendarApp_TaskCalendarAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskCalendarApp_TaskCalendarAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B1AE43000382E40F0BA3E9 /* Pods-TaskCalendarApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskCalendarApp.debug.xcconfig"; path = "Target Support Files/Pods-TaskCalendarApp/Pods-TaskCalendarApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3DA45F0423BA0E5B00F9B36E /* CalendarDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayCell.swift; sourceTree = "<group>"; };
+		3DA45F0523BA0E5B00F9B36E /* CalendarDayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarDayCell.xib; sourceTree = "<group>"; };
 		3DFA0ABD23BA0A1F0012BF4F /* TaskCalendarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskCalendarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFA0AC023BA0A1F0012BF4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DFA0AC223BA0A1F0012BF4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 		3DA45F0123BA0C4D00F9B36E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3DA45F0423BA0E5B00F9B36E /* CalendarDayCell.swift */,
+				3DA45F0523BA0E5B00F9B36E /* CalendarDayCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA45F0723BA0E5B00F9B36E /* CalendarDayCell.xib in Resources */,
 				3DFA0ACD23BA0A200012BF4F /* LaunchScreen.storyboard in Resources */,
 				3DFA0ACA23BA0A200012BF4F /* Assets.xcassets in Resources */,
 				3DFA0AC823BA0A1F0012BF4F /* Main.storyboard in Resources */,
@@ -439,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA45F0623BA0E5B00F9B36E /* CalendarDayCell.swift in Sources */,
 				3DFA0AC523BA0A1F0012BF4F /* CalendarViewController.swift in Sources */,
 				3DFA0AC123BA0A1F0012BF4F /* AppDelegate.swift in Sources */,
 				3DFA0AC323BA0A1F0012BF4F /* SceneDelegate.swift in Sources */,
