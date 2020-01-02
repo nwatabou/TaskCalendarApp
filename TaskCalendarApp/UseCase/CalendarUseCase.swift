@@ -19,7 +19,9 @@ final class CalendarUseCase {
     }
 
     var monthString: String {
-        return firstDate.string(format: "YYYY/MM")
+        let formatter = DateFormatter()
+        formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMM", options: 0, locale: Locale(identifier: "ja_JP"))
+        return formatter.string(from: firstDate)
     }
 
     init() {
@@ -43,12 +45,14 @@ final class CalendarUseCase {
         }
     }
 
-    func nextMonth() {
+    func nextMonth() -> [Date] {
         firstDate = calendar.date(byAdding: .month, value: 1, to: firstDate)
+        return createDaysForMonth()
     }
 
-    func prevMonth() {
+    func prevMonth() -> [Date] {
         firstDate = calendar.date(byAdding: .month, value: -1, to: firstDate)
+        return createDaysForMonth()
     }
 }
 

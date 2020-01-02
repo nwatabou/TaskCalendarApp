@@ -14,8 +14,23 @@ final class CalendarViewModel {
     private let calendarUseCase = CalendarUseCase()
     private let eventUseCase = EventUseCase()
 
+    var bindMonthString = PublishRelay<String>()
+
     func getDaysOfMonth() -> Single<[Date]> {
         let days = calendarUseCase.createDaysForMonth()
+        bindMonthString.accept(calendarUseCase.monthString)
+        return Single.just(days)
+    }
+
+    func getPrevMonth() -> Single<[Date]> {
+        let days = calendarUseCase.prevMonth()
+        bindMonthString.accept(calendarUseCase.monthString)
+        return Single.just(days)
+    }
+
+    func getNextMonth() -> Single<[Date]> {
+        let days = calendarUseCase.nextMonth()
+        bindMonthString.accept(calendarUseCase.monthString)
         return Single.just(days)
     }
 
