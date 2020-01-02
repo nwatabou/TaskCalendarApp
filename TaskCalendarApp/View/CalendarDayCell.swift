@@ -11,6 +11,9 @@ import UIKit
 class CalendarDayCell: UICollectionViewCell {
 
     static let identifier: String = "dayCell"
+    static var nib: UINib {
+        return UINib(nibName: "\(self)", bundle: nil)
+    }
 
     @IBOutlet weak var dayLabel: UILabel!
 

@@ -23,6 +23,8 @@ class CalendarViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private let sectionCount: Int = 2
     private let columnTitleSection: Int = 0
+    private let cellMargin: CGFloat = 8.0
+    private let insetMargin: CGFloat = 16.0
     private let daysSection: Int = 1
     private let daysCountPerWeek: Int = 7
     private var dayTasks = [DayTask]()
@@ -34,10 +36,14 @@ class CalendarViewController: UIViewController {
     }
 
     private func initSubviews() {
+        calendarView.delegate = self
         calendarView.dataSource = self
+        calendarView.register(CalendarDayCell.nib, forCellWithReuseIdentifier: CalendarDayCell.identifier)
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = cellMargin
+        layout.minimumInteritemSpacing = cellMargin
+        calendarView.collectionViewLayout = layout
 
-        let nib = UINib(nibName: "CalendarDayCell", bundle: nil)
-        calendarView.register(nib, forCellWithReuseIdentifier: CalendarDayCell.identifier)
         viewModel.requestCalendarAccessIfNeeded()
 
         viewModel.getDaysOfMonth()
@@ -72,5 +78,20 @@ extension CalendarViewController: UICollectionViewDataSource {
             cell.set(dayString: days[indexPath.row].string(format: "d"))
         }
         return cell
+    }
+}
+
+extension CalendarViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let numberOfMargin: CGFloat = 8.0
+        let insetsMargin: CGFloat = insetMargin * 2
+        let collectionViewWedth = collectionView.frame.size.width - insetsMargin
+        let width: CGFloat = (collectionViewWedth - cellMargin * numberOfMargin) / CGFloat(daysCountPerWeek)
+        return CGSize(width: width, height: width)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: insetMargin, left: insetMargin, bottom: insetMargin, right: insetMargin)
     }
 }
