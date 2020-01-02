@@ -15,23 +15,24 @@ final class CalendarViewModel {
     private let eventUseCase = EventUseCase()
 
     var bindMonthString = PublishRelay<String>()
+    var bindDayOfMonth = PublishRelay<[Date]>()
 
-    func getDaysOfMonth() -> Single<[Date]> {
+    func getDaysOfMonth() {
         let days = calendarUseCase.createDaysForMonth()
         bindMonthString.accept(calendarUseCase.monthString)
-        return Single.just(days)
+        bindDayOfMonth.accept(days)
     }
 
-    func getPrevMonth() -> Single<[Date]> {
+    func getPrevMonth() {
         let days = calendarUseCase.prevMonth()
         bindMonthString.accept(calendarUseCase.monthString)
-        return Single.just(days)
+        bindDayOfMonth.accept(days)
     }
 
-    func getNextMonth() -> Single<[Date]> {
+    func getNextMonth() {
         let days = calendarUseCase.nextMonth()
         bindMonthString.accept(calendarUseCase.monthString)
-        return Single.just(days)
+        bindDayOfMonth.accept(days)
     }
 
     func requestCalendarAccessIfNeeded() {

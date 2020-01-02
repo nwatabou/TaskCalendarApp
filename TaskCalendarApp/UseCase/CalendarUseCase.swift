@@ -20,7 +20,7 @@ final class CalendarUseCase {
 
     var monthString: String {
         let formatter = DateFormatter()
-        formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMM", options: 0, locale: Locale(identifier: "ja_JP"))
+        formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMM", options: 0, locale: Locale.current)
         return formatter.string(from: firstDate)
     }
 

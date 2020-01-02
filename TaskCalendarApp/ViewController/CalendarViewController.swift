@@ -42,28 +42,30 @@ class CalendarViewController: UIViewController {
         viewModel.requestCalendarAccessIfNeeded()
 
         viewModel.bindMonthString
-        .asDriver(onErrorDriveWith: Driver.empty())
-        .drive(onNext: { [weak self] currentMonth in
-            self?.titleLabel.text = currentMonth
-        }).disposed(by: disposeBag)
-
-        viewModel.getDaysOfMonth()
             .asDriver(onErrorDriveWith: Driver.empty())
-            .drive(onNext: { [weak self] response in
-                self?.days = response
+            .drive(onNext: { [weak self] currentMonth in
+                self?.titleLabel.text = currentMonth
+            }).disposed(by: disposeBag)
+
+        viewModel.bindDayOfMonth
+            .asDriver(onErrorDriveWith: Driver.empty())
+            .drive(onNext: { [weak self] daysOfMonth in
+                self?.days = daysOfMonth
                 self?.calendarView.reloadData()
             }).disposed(by: disposeBag)
+
+        viewModel.getDaysOfMonth()
     }
 
     private func bindTapAction() {
         prevButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.showPrevMonth()
+                self?.viewModel.getPrevMonth()
             }).disposed(by: disposeBag)
 
         nextButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.showNextMonth()
+                self?.viewModel.getNextMonth()
             }).disposed(by: disposeBag)
     }
 
@@ -75,24 +77,6 @@ class CalendarViewController: UIViewController {
         layout.minimumLineSpacing = cellMargin
         layout.minimumInteritemSpacing = cellMargin
         calendarView.collectionViewLayout = layout
-    }
-
-    private func showPrevMonth() {
-        viewModel.getPrevMonth()
-            .asDriver(onErrorDriveWith: Driver.empty())
-            .drive(onNext: { [weak self] prevMonthDays in
-                self?.days = prevMonthDays
-                self?.calendarView.reloadData()
-            }).disposed(by: disposeBag)
-    }
-
-    private func showNextMonth() {
-        viewModel.getNextMonth()
-            .asDriver(onErrorDriveWith: Driver.empty())
-            .drive(onNext: { [weak self] nextMonthDays in
-                self?.days = nextMonthDays
-                self?.calendarView.reloadData()
-            }).disposed(by: disposeBag)
     }
 }
 
